@@ -43,5 +43,7 @@ PRICE : Price of the property in Lakhs(Target Variable)
 Click <a href="https://secondchancecar.herokuapp.com/">here</a>  or type https://secondchancecar.herokuapp.com/ for visiting the site.
 
 ## A GLIMPSE OF THE WEB APP:
+<img src='2021-10-31.png'></img>
 
-![GIF](readme_resources/carpred.gif)
+
+## Please do ⭐ the repository, if it helped you in anyway.
