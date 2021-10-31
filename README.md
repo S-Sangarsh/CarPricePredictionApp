@@ -44,6 +44,3 @@ Click <a href="https://secondchancecar.herokuapp.com/">here</a>  or type https:/
 
 ## A GLIMPSE OF THE WEB APP:
 <img src='2021-10-31.png'></img>
-
-
-## Please do ⭐ the repository, if it helped you in anyway.
