@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{%block title %}
+<style>
+.footer {
+   position: fixed;
+   left: 0;
+   bottom:0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+</style>
+<h1 class="display-5" style="text-align: center;">Abouts US</h1>
+<p class="lead" style="text-align:center;">
+   Welcome to Second-Chance, buying or Selling of car might be a tedious process and sometimes you are not satisfied by the price offered.We are here to help find correct price based on some information provided about your vehicle. For hassle-Free just click on PRICE PREDICTOR to get your estimate on  your car.
+
+</p>
+<div class="text-center">
+  <img src="{{url_for('static',filename='image-6.gif')}}" class="rounded" alt="..." height="450" width="450">
+</div>
+<div class="footer">
+  <p>© 2021 SecondChance Company Inc, A Fictional Company</p>
+</div>
+{% endblock  %}

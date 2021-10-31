@@ -1,0 +1,122 @@
+{% extends 'index.html' %}
+{%block form %}
+<style >
+  .box{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .label
+  {
+    font-family:verdana;
+    text-align: center;
+    font-size: 20px;
+  }
+
+.footer {
+   position: absolute;
+   left: 0;
+   bottom: -1;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+  input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+</style>
+<div>
+  <form action="{{url_for("predict")}}" method="post">  <!-- posting information and not getting information -->
+  
+    <label class="label" for="brand">BRAND</label>
+    <select  class="box" name="Brand" id="Brand" required="required">
+        <option value="AMBASSADOR">Ambassador</option>
+        <option value="AUDI">Audi</option>
+        <option value="BENTLEY">Bentley</option>
+        <option value="BMW">BMW</option>
+        <option value="CHEVROLET">Chevrolet</option>
+        <option value="DATSUN">Datsun</option>
+        <option value="FIAT">Fiat</option>
+        <option value="FORCE">Force</option>
+        <option value="FORD">Ford</option>
+        <option value="HONDA">Honda</option>
+        <option value="HYUNDAI">Hyundai</option>
+        <option value="ISUZU">Isuzu</option>
+        <option value="JAGUAR">Jaguar</option>
+        <option value="JEEP">Jeep</option>
+        <option value="LAMBORGHINI">Lamborghini</option>
+        <option value="LANDROVER">Land Rover</option>
+        <option value="MAHINDRA">Mahindra</option>
+        <option value="MARUTI">Maruti Suzuki</option>
+        <option value="MERCEDES">Mercedes-Benz</option>
+        <option value="MINI">Mini</option>
+        <option value="MITSUBISHI">Mitsubishi</option>
+        <option value="NISSAN">Nissan</option>
+        <option value="PORSCHE">Porsche</option>
+        <option value="RENAULT">Renault</option>
+        <option value="SKODA">Skoda</option>
+        <option value="TATA">Tata</option>
+        <option value="TOYOTA">Toyota</option>
+        <option value="VOLKSWAGEN">Volkswagen</option>
+        <option value="VOLVO">Volvo</option>
+    </select>
+   <label class="label" for="location">CITY</label>
+    <select class="box" name="Location" id="Location" required="required">
+        <option value="Delhi">Delhi</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Pune">Pune</option>
+        <option value="Coimbatore">Coimbatore</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Jaipur">Jaipur</option>
+        <option value="Kochi">Kochi</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Ahmedabad">Ahmedabad</option>
+    </select>
+    <label class="label" for="year">PURCHASE YEAR</label>
+    <input class="box" type="number" id="Year" name="Year" placeholder="Purchase Year" required="required">
+    <label class="label" for="kms">KILOMETRES DRIVEN</label>
+    <input class="box" type="number" id="Kms" name="Kms" placeholder="Kms Driven" required="required">
+    <label class="label" for="fuel">FUEL TYPE</label>
+    <select class="box" name="Fuel" id="Fuel" required="required">
+        <option value="CNG">CNG</option>
+        <option value="Diesel">Diesel</option>
+        <option value="LPG">LPG</option>
+        <option value="Petrol">Petrol</option>
+    </select>
+    <label class="label" for="transmission">TRANSMISSION</label>
+    <select class="box" name="Transmission" id="Transmission" required="required">
+        <option value="Automatic">Automatic</option>
+        <option value="Manual">Manual</option>
+    </select>
+    <label class="label" for="mileage">MILEAGE</label>
+    <input class="box" type="number" id="mileage" name="Mileage" placeholder="Mileage in kmpl" step="0.01" required="required">
+    <label class="label" for="engine">ENGINE</label>
+    <input class="box" type="number" id="Engine" name="Engine" placeholder="Engine in CC" step="0.01" required="required">
+    <label class="label" for="power">POWER</label>
+    <input class='box' type="number" id="Power" name="Power" placeholder="Power in bhp" step="0.01" required="required">
+     <label class="label" for="owner">OWNER TYPE</label>
+    <select class="box" id="Owner" name="Owner" required="required">
+      <option value=1>First</option>
+      <option value=2>Second</option>
+      <option value=3>Third</option>
+      <option value=4>Fourth or Above</option>
+    </select>
+    <input class="box" type="submit" value="Submit">
+  </form>
+  <div class="footer">
+  <p>© 2021 SecondChance Company Inc, A Fictional Company</p>
+</div>
+{% endblock  %}

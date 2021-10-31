@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% block Price %}
+<style>
+.footer {
+   position: fixed;
+   left: 0;
+   bottom:0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+</style>
+<p class="lead" style="text-align:center;">
+   Price of your Vehicle is {{price}} Lakhs.This might vary based on physical inspection of the car.
+   For Checking another car just click on <a  style="color: darkred;font-family: verdana" href="{{url_for("PricePredictor")}}"> PRICE PREDICTOR</a>
+
+</p>
+<div class="text-center">
+  <img src="{{url_for('static',filename='money.gif')}}" class="rounded" alt="..." height="450" width="450">
+</div>
+<div class="footer">
+ <div class="footer">
+  <p>© 2021 SecondChance Company Inc, A Fictional Company</p>
+</div>
+{% endblock  %}
